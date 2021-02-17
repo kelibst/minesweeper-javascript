@@ -1,0 +1,19 @@
+{
+  "name": "minesweeper-javascript",
+  "version": "1.0.0",
+  "description": "a javascript and webpack minewsweeper game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelibst/minesweeper-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelibst/minesweeper-javascript/issues"
+  },
+  "homepage": "https://github.com/kelibst/minesweeper-javascript#readme"
+}
