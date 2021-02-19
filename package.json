@@ -4,6 +4,7 @@
   "description": "a javascript and webpack minewsweeper game",
   "main": "index.js",
   "scripts": {
+    "serve": "webpack -w",
     "build": "webpack",
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
