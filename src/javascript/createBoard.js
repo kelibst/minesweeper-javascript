@@ -1,10 +1,10 @@
+import addFlag from "./addFlag";
 import clickSquare from "./clickedSquare";
 import validate from "./validation";
 
-const createBoard = (width, grid, squares, bombAmount) => {
+const createBoard = (width, grid, squares, bombAmount, isGameOver, flags) => {
   const bombsArr = Array(bombAmount).fill("bomb");
   const emptyArr = Array(width * width - bombAmount).fill("valid");
-  debugger;
   const gameArr = [...emptyArr, ...bombsArr];
   const shufArr = gameArr.sort(() => Math.random() - 0.5);
 
@@ -15,7 +15,12 @@ const createBoard = (width, grid, squares, bombAmount) => {
     grid.appendChild(square);
     squares.push(square);
 
-    square.addEventListener("click", (e) => clickSquare(square));
+    square.addEventListener("click", (e) => clickSquare(square, squares, width, isGameOver));
+
+    square.oncontextmenu = (e) => {
+      e.preventDefault();
+      addFlag(square, isGameOver, flags, bombAmount, flags)
+    }
   }
 
   validate(width, squares);
