@@ -1,5 +1,6 @@
 import checkSquare from "./checkSquare";
 import gameOver from './gameOver'
+
 const clickSquare = (square, squares, width, isGameOver) => {
     let currentId = square.id
     if(isGameOver || square.classList.contains('flag')) return

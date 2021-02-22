@@ -9,5 +9,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     let squares = []
     let isGameOver = false;
     let flags = 0;
-    createBoard(width, grid, squares, bombAmount, isGameOver, flags)
+    let matches = 0;
+    createBoard(width, grid, squares, bombAmount, isGameOver, flags, matches)
 })

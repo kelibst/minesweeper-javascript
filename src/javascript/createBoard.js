@@ -2,7 +2,7 @@ import addFlag from "./addFlag";
 import clickSquare from "./clickedSquare";
 import validate from "./validation";
 
-const createBoard = (width, grid, squares, bombAmount, isGameOver, flags) => {
+const createBoard = (width, grid, squares, bombAmount, isGameOver, flags, matches) => {
   const bombsArr = Array(bombAmount).fill("bomb");
   const emptyArr = Array(width * width - bombAmount).fill("valid");
   const gameArr = [...emptyArr, ...bombsArr];
@@ -19,7 +19,7 @@ const createBoard = (width, grid, squares, bombAmount, isGameOver, flags) => {
 
     square.oncontextmenu = (e) => {
       e.preventDefault();
-      addFlag(square, isGameOver, flags, bombAmount, flags)
+      addFlag(square, isGameOver, flags, bombAmount, matches, squares)
     }
   }
 

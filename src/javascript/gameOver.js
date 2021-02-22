@@ -5,7 +5,6 @@ const gameOver = (isGameOver, squares) => {
     squares.forEach(square  => {
         if (square.classList.contains('bomb')) {
             square.innerHTML = `&#9899;`
-            console.log(square)
         }
     });
 }
