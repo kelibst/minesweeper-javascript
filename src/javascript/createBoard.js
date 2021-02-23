@@ -15,6 +15,11 @@ const createBoard = (
   const emptyArr = Array(width * width - bombAmount).fill("valid");
   const gameArr = [...emptyArr, ...bombsArr];
   const shufArr = gameArr.sort(() => Math.random() - 0.5);
+  let flagAdd = document.querySelector('.flag-add');
+
+  flagAdd.addEventListener('click', () => {
+    flagAdd.classList.contains('active') ? flagAdd.classList.remove('active') : flagAdd.classList.add('active');
+  })
 
   for (let i = 0; i < width * width; i++) {
     const square = document.createElement("div");
@@ -24,6 +29,8 @@ const createBoard = (
     squares.push(square);
 
     square.addEventListener("click", (e) =>
+      flagAdd.classList.contains('active') ?  
+      addFlag(square, isGameOver, flags, bombAmount, matches, squares) :
       clickSquare(square, squares, width, isGameOver)
     );
 
