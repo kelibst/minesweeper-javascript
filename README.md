@@ -21,7 +21,7 @@ In this project I:
 
 ## Live Demo
 
-[Click here to see see the game!](https://raw.githack.com/Luckyaremu/js-shooter-game/dev-branch/dist/index.html)
+[Click here to see see the game!](https://raw.githack.com/kelibst/minesweeper-javascript/main/dist/index.html)
 
 ## Getting Started
 
