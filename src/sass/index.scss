@@ -11,6 +11,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  flex-direction: column;
+  color: #fff;
+
+  &-header{
+      margin-bottom: 3rem;
+  }
 }
 .grid {
   display: flex;
