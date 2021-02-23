@@ -14,9 +14,29 @@ body {
   flex-direction: column;
   color: #fff;
 
-  &-header{
-      margin-bottom: 3rem;
+  &-header {
+    margin-bottom: 3rem;
   }
+}
+.flag-add {
+  background: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.success {
+  background-color: rgb(0, 105, 82);
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+.danger {
+  background-color: rgb(109, 14, 14);
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  padding: 1rem;
 }
 .grid {
   display: flex;
